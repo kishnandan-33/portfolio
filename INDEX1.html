@@ -1,271 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <title>My Portfolio</title>
+    <file:///C:/Users/KISHNANDAN/OneDrive/portfolio/INDEX1.html rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-
-     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    > 
-
-    <meta
-        name="description"
-        content="Suryakant's developer portfolio showcasing skills and projects."
-    >
-
-    <title>Suryakant | Developer Portfolio</title>
-
-    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ==================== HEADER ==================== -->
-
+    <!-- Navbar -->
     <header>
-        <nav class="navbar">
+        <nav>
+            <h2 class="logo">Kishnandan</h2>
 
-            <a href="#" class="logo">DevProfile</a>
-
-            <ul class="nav-links">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
         </nav>
     </header>
 
 
-    <!-- ==================== MAIN ==================== -->
+    <!-- Home -->
+    <section id="home" class="home">
+        <div>
+            <h1>Hi, I'm <span>Kishnandan</span></h1>
 
-    <main>
-
-        <!-- ==================== HERO ==================== -->
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <p class="intro">Hello, I'm</p>
-
-                <h1>Rahul Sharma</h1>
-
-                <h2>Frontend Developer</h2>
-
-                <p class="hero-description">
-                    I build modern, responsive and user-friendly
-                    web applications using modern frontend technologies.
-                </p>
-
-                <a href="#projects" class="btn">
-                    View My Projects
-                </a>
-
-            </div>
-
-
-            <div class="hero-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
-                    alt="Profile photo of Rahul Sharma"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== ABOUT ==================== -->
-
-        <section id="about" class="section">
-
-            <h2 class="section-title">About Me</h2>
+            <h2>Computer Science Student</h2>
 
             <p>
-                I am a Computer Science student passionate about
-                frontend development, problem solving and software
-                engineering.
+                I am a B.Tech CSE student interested in
+                Web Development and Data Structures & Algorithms.
             </p>
 
-            <p>
-                I enjoy building real-world applications and learning
-                new technologies to solve practical problems.
-            </p>
-
-        </section>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
 
 
-        <!-- ==================== SKILLS ==================== -->
-
-        <section id="skills" class="section">
-
-            <h2 class="section-title">My Skills</h2>
-
-            <ul class="skills-list">
-
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Git & GitHub</li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- ==================== PROJECTS ==================== -->
-
-        <section id="projects" class="section">
-
-            <h2 class="section-title">My Projects</h2>
-
-            <div class="projects">
-
-                <article class="project-card">
-
-                    <h3>JobGenie</h3>
-
-                    <p>
-                        A platform that helps students discover
-                        relevant job opportunities.
-                    </p>
-
-                    <a href="#" class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <h3>SkillTrek</h3>
-
-                    <p>
-                        A learning platform designed to help
-                        students improve their technical skills.
-                    </p>
-
-                    <a href="#" class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <h3>Kavach</h3>
-
-                    <p>
-                        A security-focused SaaS application
-                        designed to solve real-world problems.
-                    </p>
-
-                    <a href="#" class="project-link">
-                        View Project →
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== CONTACT ==================== -->
-
-        <section id="contact" class="section">
-
-            <h2 class="section-title">Contact Me</h2>
-
-            <form class="contact-form">
-
-                <div class="form-group">
-
-                    <label for="name">
-                        Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message"
-                    ></textarea>
-
-                </div>
-
-
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer>
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
 
         <p>
-            © 2026 Rahul Sharma. All rights reserved.
+            I am a Computer Science student who enjoys solving
+            programming problems and building projects.
+            Currently, I am improving my skills in Java,
+            DSA, HTML and CSS.
         </p>
+    </section>
 
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">Java</div>
+            <div class="skill">DSA</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+                <h3>Rock Paper Scissors Game</h3>
+                <p>
+                    A simple Rock Paper Scissors game
+                    built using Java.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>DSA 100 Days</h3>
+                <p>
+                    A 100-day DSA challenge where I solve
+                    programming problems regularly.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>PlayNearby</h3>
+                <p>
+                    An idea for helping people find
+                    nearby players for casual sports.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: github.com/yourusername</p>
+        <p>LinkedIn: linkedin.com/in/yourusername</p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Kishnandan. All Rights Reserved.</p>
     </footer>
 
 </body>
-
 </html>
