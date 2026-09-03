@@ -1,118 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <file:///C:/Users/KISHNANDAN/OneDrive/portfolio/INDEX1.html rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="description" content="Kishnandan Kumar — B.Tech Computer Science Engineering Student Portfolio">
+    <title>Kishnandan Kumar | Portfolio</title>
+
+    <!-- Theme initialization to prevent flash -->
+    <script>
+        (function () {
+            var theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+    <!-- Google Fonts — Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <h2 class="logo">Kishnandan</h2>
+    <!-- ============================
+         NAVBAR
+    ============================ -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                Kishnandan Kumar<span>.</span>
+            </a>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#coding" class="nav-link">Coding</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
+    <main>
 
-    <!-- Home -->
-    <section id="home" class="home">
-        <div>
-            <h1>Hi, I'm <span>Kishnandan</span></h1>
+        <!-- ============================
+             HERO SECTION
+        ============================ -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
 
-            <h2>Computer Science Student</h2>
+                    <p class="hero-label reveal">
+                        COMPUTER SCIENCE STUDENT
+                    </p>
 
-            <p>
-                I am a B.Tech CSE student interested in
-                Web Development and Data Structures & Algorithms.
+                    <h1 class="hero-title reveal">
+                        Hi, I'm <span class="accent">Kishnandan Kumar</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle reveal">
+                        Building skills through code and problem solving.
+                    </h2>
+
+                    <p class="hero-description reveal">
+                        I'm a Computer Science student focused on DSA, Java and Web Development.
+                        I enjoy solving challenging problems and building practical projects.
+                    </p>
+
+                    <div class="hero-buttons reveal">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <div class="hero-socials reveal">
+                        <!-- GitHub -->
+                        <a href="https://github.com/kishnandan-33" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/kishnandan-24311133a/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <!-- LeetCode -->
+                        <a href="https://leetcode.com/u/kishnandan/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <span>LeetCode</span>
+                        </a>
+
+                        <!-- Codolio -->
+                        <a href="https://codolio.com/profile/kishnandank3312" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <span>Codolio</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================
+             ABOUT SECTION
+        ============================ -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <p class="section-label">ABOUT</p>
+                    <h2>About Me</h2>
+                </div>
+
+                <div class="about-content">
+                    <p class="reveal">
+                        I am currently pursuing a B.Tech in Computer Science and Engineering
+                        at Galgotias University. With a solid foundation in programming and a
+                        keen interest in software development, I enjoy building practical
+                        solutions that solve real-world problems.
+                    </p>
+
+                    <p class="reveal">
+                        My primary areas of focus include Data Structures &amp; Algorithms,
+                        Java, and Web Development. I regularly practice problem solving and
+                        competitive programming to sharpen my algorithmic thinking and coding
+                        skills.
+                    </p>
+
+                    <p class="reveal">
+                        I believe in continuous learning, writing clean and maintainable code,
+                        and actively improving my software engineering capabilities through
+                        hands-on projects and exploration of modern technologies.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================
+             SKILLS SECTION
+        ============================ -->
+        <section id="skills" class="section">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <p class="section-label">SKILLS</p>
+                    <h2>Technical Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <!-- Programming -->
+                    <div class="skill-category reveal">
+                        <h3>Programming</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Java</span>
+                            <span class="badge">C++</span>
+                            <span class="badge">C</span>
+                        </div>
+                    </div>
+
+                    <!-- DSA -->
+                    <div class="skill-category reveal">
+                        <h3>Data Structures &amp; Algorithms</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Arrays</span>
+                            <span class="badge">Strings</span>
+                            <span class="badge">Linked List</span>
+                            <span class="badge">Stack</span>
+                            <span class="badge">Queue</span>
+                            <span class="badge">Trees</span>
+                            <span class="badge">Graphs</span>
+                            <span class="badge">Recursion</span>
+                            <span class="badge">Backtracking</span>
+                            <span class="badge">Dynamic Programming</span>
+                            <span class="badge">Sorting &amp; Searching</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skill-category reveal">
+                        <h3>Web Development</h3>
+                        <div class="skill-badges">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="skill-category reveal">
+                        <h3>Tools &amp; Platforms</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Git</span>
+                            <span class="badge">GitHub</span>
+                            <span class="badge">VS Code</span>
+                            <span class="badge">LeetCode</span>
+                            <span class="badge">GeeksforGeeks</span>
+                            <span class="badge">Codolio</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================
+             PROJECTS SECTION
+        ============================ -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <p class="section-label">PROJECTS</p>
+                    <h2>Selected Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 — E-Learning Platform -->
+                    <article class="project-card reveal">
+                        <div class="project-top">
+                            <span class="project-number">01</span>
+                        </div>
+                        <h3>E-Learning Platform</h3>
+                        <p>
+                            A web development project focused on making online learning
+                            easier and more accessible through a clean, intuitive user interface.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/kishnandan-33"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn btn-secondary btn-sm">
+                                View GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 — Rock Paper Scissors -->
+                    <article class="project-card reveal">
+                        <div class="project-top">
+                            <span class="project-number">02</span>
+                        </div>
+                        <h3>Rock Paper Scissors Game</h3>
+                        <p>
+                            A Java GUI-based Rock Paper Scissors game featuring
+                            interactive game rounds against the computer with responsive UI feedback.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">GUI / Swing</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/kishnandan-33/ROCK-PAPER-SCISSORS-GAME"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn btn-secondary btn-sm">
+                                View GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 — PlayNearby -->
+                    <article class="project-card reveal">
+                        <div class="project-top">
+                            <span class="project-number">03</span>
+                        </div>
+                        <h3>PlayNearby</h3>
+                        <p>
+                            A project concept designed to help people discover and connect
+                            with nearby players for casual sports and community activities.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Concept Project</span>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status">In Development</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================
+             EDUCATION SECTION
+        ============================ -->
+        <section id="education" class="section">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <p class="section-label">EDUCATION</p>
+                    <h2>Academic Background</h2>
+                </div>
+
+                <div class="education-grid">
+
+                    <div class="education-card reveal">
+                        <div class="education-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="education-info">
+                            <h3>B.Tech – Computer Science Engineering</h3>
+                            <p class="education-institution">Galgotias University</p>
+                            <p class="education-detail">
+                                CGPA: <strong>7.99</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-card reveal">
+                        <div class="education-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="education-info">
+                            <h3>Class 12</h3>
+                            <p class="education-detail">
+                                Percentage: <strong>80.4%</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================
+             CODING & PROBLEM SOLVING
+        ============================ -->
+        <section id="coding" class="section section-alt">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <p class="section-label">CODING</p>
+                    <h2>Coding &amp; Problem Solving</h2>
+                </div>
+
+                <p class="coding-intro reveal">
+                    I regularly practice Data Structures &amp; Algorithms and competitive
+                    programming to strengthen my problem-solving skills and technical foundation.
+                </p>
+
+                <div class="coding-grid">
+
+                    <!-- LeetCode -->
+                    <div class="coding-card reveal">
+                        <div class="coding-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>LeetCode</h3>
+                        <p>Regular DSA and problem-solving practice.</p>
+                        <a href="https://leetcode.com/u/kishnandan/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            View LeetCode
+                        </a>
+                    </div>
+
+                    <!-- Codolio -->
+                    <div class="coding-card reveal">
+                        <div class="coding-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Codolio</h3>
+                        <p>My coding profile and problem-solving portfolio.</p>
+                        <a href="https://codolio.com/profile/kishnandank3312" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            View Codolio
+                        </a>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="coding-card reveal">
+                        <div class="coding-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>My projects and development work.</p>
+                        <a href="https://github.com/kishnandan-33" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            View GitHub
+                        </a>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="coding-card reveal">
+                        <div class="coding-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional profile and updates.</p>
+                        <a href="https://www.linkedin.com/in/kishnandan-24311133a/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            View LinkedIn
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================
+             CONTACT SECTION
+        ============================ -->
+        <section id="contact" class="section">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <p class="section-label">CONTACT</p>
+                    <h2>Let's Connect</h2>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Contact Details -->
+                    <div class="contact-info reveal">
+                        <p class="contact-description">
+                            Feel free to connect with me for opportunities, collaboration,
+                            or technology discussions.
+                        </p>
+
+                        <div class="contact-links">
+                            <!-- Email -->
+                            <a href="mailto:kishnandank79@gmail.com" class="contact-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>kishnandank79@gmail.com</span>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/kishnandan-33" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/kishnandan-24311133a/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+
+                            <!-- LeetCode -->
+                            <a href="https://leetcode.com/u/kishnandan/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                <span>LeetCode</span>
+                            </a>
+
+                            <!-- Codolio -->
+                            <a href="https://codolio.com/profile/kishnandank3312" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                <span>Codolio</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form class="contact-form reveal" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="formName">Name</label>
+                            <input type="text" id="formName" name="name" placeholder="Your name" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formEmail">Email</label>
+                            <input type="email" id="formEmail" name="email" placeholder="you@example.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formMessage">Message</label>
+                            <textarea id="formMessage" name="message" rows="4" placeholder="Your message..." required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message
+                        </button>
+
+                        <p class="form-status" id="formStatus"></p>
+
+                        <p class="form-disclaimer">
+                            This is a frontend-only form — messages are not sent to a server.
+                            Please use direct email for inquiries.
+                        </p>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================
+         FOOTER
+    ============================ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-name">Kishnandan Kumar</p>
+            <p class="footer-tagline">
+                B.Tech Computer Science Engineering Student
             </p>
 
-            <a href="#projects" class="btn">View My Projects</a>
-        </div>
-    </section>
-
-
-    <!-- About -->
-    <section id="about">
-        <h2>About Me</h2>
-
-        <p>
-            I am a Computer Science student who enjoys solving
-            programming problems and building projects.
-            Currently, I am improving my skills in Java,
-            DSA, HTML and CSS.
-        </p>
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-        <h2>My Skills</h2>
-
-        <div class="skills-container">
-            <div class="skill">Java</div>
-            <div class="skill">DSA</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Git & GitHub</div>
-        </div>
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="projects-container">
-
-            <div class="project">
-                <h3>Rock Paper Scissors Game</h3>
-                <p>
-                    A simple Rock Paper Scissors game
-                    built using Java.
-                </p>
+            <div class="footer-links">
+                <a href="https://github.com/kishnandan-33" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kishnandan-24311133a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://leetcode.com/u/kishnandan/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </a>
+                <a href="https://codolio.com/profile/kishnandank3312" target="_blank" rel="noopener noreferrer" aria-label="Codolio">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </a>
             </div>
 
-            
-
-            <div class="project">
-                <h3>PlayNearby</h3>
-                <p>
-                    An idea for helping people find
-                    nearby players for casual sports.
-                </p>
-            </div>
-
+            <p class="footer-copyright">
+                &copy; 2026 Kishnandan Kumar. All rights reserved.
+            </p>
         </div>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourusername</p>
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Kishnandan. All Rights Reserved.</p>
     </footer>
 
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
